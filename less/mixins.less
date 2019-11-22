@@ -1,1 +1,18 @@
 // Mixins in here
+.flex(@direction, @justify) {
+    display: flex;
+    flex-direction: @direction;
+    justify-content: @justify;
+}
+
+.button(@width, @height, @radius, @size) {
+    background-color: darken(turquoise, 25%);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: @width;
+    height: @height;
+    border-radius: @radius;
+    font-size: @size;
+}
