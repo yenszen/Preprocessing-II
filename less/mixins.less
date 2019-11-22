@@ -5,14 +5,14 @@
     justify-content: @justify;
 }
 
-.button(@width, @height, @radius, @size) {
-    background-color: darken(turquoise, 25%);
+.button(@color) {
+    background-color: @color;
     color: white;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: @width;
-    height: @height;
-    border-radius: @radius;
-    font-size: @size;
+    width: 80%;
+    height: 40px;
+    border-radius: 15px;
+    font-size: 2rem;
 }
