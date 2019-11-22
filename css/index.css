@@ -208,6 +208,15 @@ nav a {
   align-items: center;
   padding: 30px 0;
   border-bottom: 2px dashed grey;
+  animation: fade-in 0.2s linear infitnite alternate;
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 @media (max-width: 500px) {
   .home header {
@@ -329,4 +338,29 @@ nav a {
     font-size: 2rem;
     width: 90%;
   }
+}
+.home form .form-names {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.home form .form-names #special {
+  height: 50px;
+}
+.home form input[type="text"] {
+  background-color: #00999a;
+  border: 2px solid #000080;
+  color: white;
+}
+.home form input[type="submit"] {
+  border-radius: 5px;
+  border: 0;
+  width: 120px;
+  height: 30px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 1.5rem;
+  margin: 10px 0;
+  background-color: #00999a;
+  color: white;
 }
