@@ -15,7 +15,7 @@
 </head>
 
 <body>
-
+<div class="background">
   <div class="container home">
     <header>
         <h1>Fun Bus</h1>
@@ -83,28 +83,34 @@
     </section>
 
     <form>
-      <div class="form-names">
-        <p>First Name: <input type="text" name="firstname" maxlength="40"></p>
-        <p>Last Name: <input type="text" name="lastname" maxlength="40"></p>
-        <p>Email: <input type="text" name="email" maxlength="40"></p>
-        <p>Mobile: <input type="text" name="mobile" maxlength="15"></p>
-        <p>Special Instructions: <input id="special" type="text" name="instructions" size="50" maxlength="200"></p>
-      </div>
-  
-      <div class="form-radio">
+      <div class="package-selection">
         <h2>Which vacation package most interests you?</h2>
-        <p><input type="radio" name="package" value="sun" checked> Fun in the Sun </p>
-        <p><input type="radio" name="package" value="mountain" checked> Mountain Excursion </p>
-        <p><input type="radio" name="package" value="island" checked> Island Getaway </p>
+        <br>
+        <select id="package">
+          <option value="sun">Fun in the Sun</option>
+          <option value="mountain">Mountain Excursion</option>
+          <option value="island">Island Getaway</option>
+        </select>
       </div>
 
-      <input type="submit" value="Submit">
+      <div class="user-info">
+        <h2>Contact Us</h2>
+        <div class="text">
+          <input type="text" placeholder="Fullname" maxlength="30">
+          <input type="text" placeholder="Email" maxlength="30">
+          <input type="text" placeholder="Mobile number" maxlength="30">
+        </div>
+        
+        <textarea placeholder="Message ..." rows="10" cols="60" maxlength="350"></textarea>
+        <br>
+        <input type="submit" value="Submit">
+      </div>
     </form>
   </div><!-- container -->
 
   <footer class="footer">
     <p>Copyright Fun Bus 2018</p>
   </footer>
-
+</div>
 </body>
 </html>

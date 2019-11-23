@@ -201,6 +201,9 @@ nav a {
   font-size: 1.6rem;
   padding: 20px;
 }
+.background {
+  background-image: linear-gradient(#fdb241, #ffebcd);
+}
 .home header {
   display: flex;
   flex-direction: row;
@@ -208,15 +211,6 @@ nav a {
   align-items: center;
   padding: 30px 0;
   border-bottom: 2px dashed grey;
-  animation: fade-in 0.2s linear infitnite alternate;
-}
-@keyframes fade-in {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
 }
 @media (max-width: 500px) {
   .home header {
@@ -325,6 +319,10 @@ nav a {
   border-radius: 15px;
   font-size: 2rem;
 }
+.home .content-pick .btn a {
+  text-decoration: none;
+  color: white;
+}
 @media (max-width: 500px) {
   .home .content-pick .btn {
     background-color: #17A2B8;
@@ -339,28 +337,45 @@ nav a {
     width: 90%;
   }
 }
-.home form .form-names {
+.home form input {
+  background-color: #cdebff;
+}
+.home form .package-selection {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 3em;
+}
+.home form .package-selection select {
+  height: 3em;
+  border-radius: 10px;
+  width: 30%;
+  padding-left: 1em;
+  background-color: #cdebff;
+}
+.home form .user-info .text {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
-  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
-.home form .form-names #special {
-  height: 50px;
+.home form .user-info h2 {
+  text-align: center;
 }
-.home form input[type="text"] {
-  background-color: #00999a;
-  border: 2px solid #000080;
-  color: white;
+.home form .user-info input[type="text"] {
+  border-radius: 20px;
+  height: 3em;
+  width: 30%;
+  padding: 0 1em;
 }
-.home form input[type="submit"] {
-  border-radius: 5px;
-  border: 0;
-  width: 120px;
-  height: 30px;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-size: 1.5rem;
-  margin: 10px 0;
-  background-color: #00999a;
-  color: white;
+.home form .user-info textarea {
+  width: 50%;
+  margin: 3rem 25%;
+  padding: 1em;
+  background-color: #cdebff;
+}
+.home form .user-info input[type="submit"] {
+  width: 30%;
+  height: 3em;
+  border-radius: 20px;
 }
