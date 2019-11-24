@@ -3,6 +3,13 @@ nav {
     width: 40%;
     .flex(row, space-around);
     font-size: 1.5rem;
+    
+    .keyframes(fade-in;{
+        0% {opacity: 0;}
+        100% {opacity: 1;}
+    });
+
+    .animation(fade-in 1.5s linear infinite alternate);
 
     @media @mobile {
         width: 100%;

@@ -111,7 +111,7 @@
       width: 30%;
       margin-bottom: 30px;
 
-      @media @mobile {
+      @media @tablet {
         width: 80%;
       }
     }
@@ -148,6 +148,10 @@
         width: 30%;
         padding-left: 1em;
         background-color: #cdebff;
+
+        @media @mobile {
+          width: 50%;
+        }
       }
     }
 
@@ -156,6 +160,11 @@
 
       .text {
         .flex(row, space-evenly);
+
+        @media @mobile {
+          .flex(column, space-evenly);
+          align-items: center;
+        }
       }
 
       h2 {
@@ -167,6 +176,11 @@
         height: 3em;
         width: 30%;
         padding: 0 1em;
+
+        @media @mobile {
+          width: 80%;
+          margin: 1em 0;
+        }
       }
 
       textarea {
@@ -180,6 +194,7 @@
         width: 30%;
         height: 3em;
         border-radius: 20px;
+        margin: 0 35%;
       }
     }
   }
