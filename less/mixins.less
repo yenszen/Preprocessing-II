@@ -1,1 +1,26 @@
 // Mixins in here
+.flex(@direction, @justify) {
+    display: flex;
+    flex-direction: @direction;
+    justify-content: @justify;
+}
+
+.button(@color) {
+    background-color: @color;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 40px;
+    border-radius: 15px;
+    font-size: 2rem;
+}
+
+.keyframes(@name; @arguments) {
+	@keyframes @name { @arguments(); }
+};
+
+.animation(@arguments) {
+	animation: @arguments;
+}

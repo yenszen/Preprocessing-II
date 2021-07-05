@@ -1,12 +1,41 @@
+.background {
+  background-image: linear-gradient(rgb(253, 178, 65),rgb(255, 235, 205)); 
+}
+
 .home {
+
+  header {
+    .flex(row, space-between);
+    align-items: center;
+    padding: 30px 0;
+    border-bottom: 2px dashed grey;
+
+    // .keyframes(fade-in;{
+    //   0% {opacity: 0;}
+    //   100% {opacity: 1;}
+    // });
+
+    // .animation(fade-in 0.2s linear infitnite alternate);
+
+    @media @mobile {
+      .flex(column, space-evenly);
+      padding: 15px 0;
+    }
+  }
+
+  .upper-section {
+    border-bottom: 2px dashed grey;
+
+    div {
+      padding: 10px 0;
+    }
+  }
 
   .content-section {
     margin: 30px 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-
-   
     
     .text-content {
       width: 48%;
@@ -21,7 +50,19 @@
         border-radius: 10px;
       }
     }
-  }
+
+    .text-content, .img-content {
+      @media @mobile {
+        width: 100%;
+      }
+    }
+
+    @media @mobile {
+      .flex(column, space-between);
+      flex-wrap: nowrap;
+      align-items: center;
+    }
+  } //content-section
 
   .inverse-content {
     padding-bottom: 30px;
@@ -36,6 +77,10 @@
       padding-right: 1%;
       padding-left: 0;
     }
+
+    h2 {
+      padding-top: 10px;
+    }
   }
 
   .content-destination {
@@ -45,6 +90,10 @@
     img {
       border-radius: 10px;
     }
+
+    @media @mobile {
+      width: 100%;
+    }
   }
 
   .content-pick {
@@ -53,9 +102,101 @@
     display: flex;
     justify-content: space-between;
 
+    @media @mobile {
+      .flex(column, space-between);
+      align-items: center;
+    }
+
     .destination {
       width: 30%;
       margin-bottom: 30px;
+
+      @media @tablet {
+        width: 80%;
+      }
+    }
+
+    .btn {
+      .button(teal);
+
+      a {
+        text-decoration: none;
+        color: white;
+      }
+
+      @media @mobile {
+        .button(#17A2B8);
+        width: 90%;
+      }
     }
   }
+
+  form {
+    input {
+      background-color: #cdebff;
+    }
+
+    .package-selection {
+      // background-color: salmon;
+      .flex(column, space-evenly);
+      align-items: center;
+      margin-bottom: 3em;
+
+      select {
+        height: 3em;
+        border-radius: 10px;
+        width: 30%;
+        padding-left: 1em;
+        background-color: #cdebff;
+
+        @media @mobile {
+          width: 50%;
+        }
+      }
+    }
+
+    .user-info {
+      // background-color: turquoise;
+
+      .text {
+        .flex(row, space-evenly);
+
+        @media @mobile {
+          .flex(column, space-evenly);
+          align-items: center;
+        }
+      }
+
+      h2 {
+        text-align: center;
+      }
+
+      input[type="text"] {
+        border-radius: 20px;
+        height: 3em;
+        width: 30%;
+        padding: 0 1em;
+
+        @media @mobile {
+          width: 80%;
+          margin: 1em 0;
+        }
+      }
+
+      textarea {
+        width: 50%;
+        margin: 3rem 25%;
+        padding: 1em;
+        background-color: #cdebff;
+      }
+
+      input[type="submit"] {
+        width: 30%;
+        height: 3em;
+        border-radius: 20px;
+        margin: 0 35%;
+      }
+    }
+  }
+
 }// home
